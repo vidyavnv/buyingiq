@@ -1,0 +1,4 @@
+1. Time taken: 445 secs = 7 mins approx. 
+2. Removed inserting i,i and j,j because we are taking into account 1->1->3 by i,j.
+3. Removed else part since we are not taking into account i,i 
+4. using function I am getting P_ID = 0 in the cocon matrix but without using function it's working perfectly fine.

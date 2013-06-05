@@ -1,0 +1,17 @@
+<?php
+ini_set('max_execution_time', 0);
+$start_time = MICROTIME(TRUE);
+mysql_connect("localhost","root","root");//database connection
+mysql_select_db("buyingiq");
+/*$result = mysql_query("SELECT GROUP_CONCAT(a_prim_ref_id) FROM audits WHERE a_type='P' GROUP BY a_sid");
+if (!$result) { 
+$message = 'Invalid query: ' . mysql_error() . "\n"; 
+$message .= 'Whole query: ' . $query; 
+die($message); 
+} */
+$result = mysql_query("SELECT DISTINCT SID FROM cocon GROUP BY P_ID");
+if (!$result) { 
+$message = 'Invalid query: ' . mysql_error() . "\n"; 
+$message .= 'Whole query: ' . $query; 
+die($message); 
+} 
